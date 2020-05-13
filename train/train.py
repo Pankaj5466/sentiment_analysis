@@ -65,7 +65,7 @@ def train(model, train_loader, epochs, optimizer, loss_fn, device):
             batch_y = batch_y.to(device)
             #Completed Below
             #To-DO: Check how this works.
-            output = model(batch_X) #Pass Batch
+            output = model.forward(batch_X) #Pass Batch
             loss = loss_fn(output, batch_y) #Calculate Loss
             loss.backward() #Calculate Gradients
             optimizer.step() #Update Weights
